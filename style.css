@@ -1,0 +1,237 @@
+:root {
+  --text-color: #70d7ff;
+  --link-color: #8fe0ff;
+  --bg-color: #d5f2fe;
+  --mainbg-color: #fff;
+  --border-color: #4ccdff;
+  --accent-color: #effaff;
+}
+
+body {
+  background: var(--bg-color);
+  /* background-image: url("https://files.catbox.moe/5lyeo2.png"); */
+  background-attachment: fixed;
+  color: var(--text-color);
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 5px;
+  font-family: verdana;
+  font-size: 0.8rem;
+  scrollbar-color: var(--bg-color) var(--mainbg-color);
+  scrollbar-width: thin;
+}
+.container {
+  position: fixed;
+  width: 100%;
+  min-height: 100%;
+  left: 0;
+  top: 0;
+  background-image:url('https://sadhost.neocities.org/images/tiles/bk024.gif');
+  /* background-image: url("https://i.pinimg.com/originals/ab/28/83/ab288393e58eaf385396ad16fd9fa438.jpg"); */
+  /* background-image:url('https://i.pinimg.com/736x/9c/47/c4/9c47c44d149f395e777fd6111fcea1f3--water-tower-chobits-cosplay.jpg'); */
+  /* background-image:url('https://files.catbox.moe/kbxs0z.png'); */
+  /* background-image:url('https://i.pinimg.com/originals/3c/87/5d/3c875d48b85e9ef6b1153e0d4c49f24b.jpg'); */
+  /* background-size: 100% 200%; */
+  background-position: top;
+  /* opacity: 0.25; */
+  /* filter: saturate(2); */
+  z-index: -1;
+}
+
+::selection {
+  background: var(--accent-color);
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+a:hover {
+  text-shadow: 1px 1px 10px var(--link-color);
+  letter-spacing: 2px;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px dotted var(--border-color);
+  margin: 0 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+  font-family: times new roman;
+  font-size: 1.2rem;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+/* título central */
+h1 {
+  text-shadow: 1px 1px 5px var(--link-color);
+  text-align: center;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(239, 250, 255, 1) 25%,
+    rgba(239, 250, 255, 1) 75%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  padding: 3px;
+  text-transform: uppercase;
+}
+/* título com shadow */
+h2 {
+  text-shadow: 1px 1px 5px var(--link-color);
+}
+/* título sublinhado */
+h3 {
+  border-bottom: 1px solid;
+  margin-right: 15px;
+}
+
+header,
+nav,
+main,
+footer {
+  border: 1px solid var(--border-color);
+  padding: 5px 20px;
+  background: var(--mainbg-color);
+}
+header {
+  border-bottom: 1px solid;
+  height: 240px;
+  /* background-image: url("https://files.catbox.moe/32je4s.png"); */
+  background-image: url(backgroundsHeader/n9.gif);
+  background-size: cover;
+  background-position-y: -130px;
+}
+header h1 {
+  margin: 15px;
+  font-family: times new roman;
+  font-size: 1.8rem;
+  font-style: italic;
+  text-align: right;
+  vertical-align: text-bottom;
+  background: none;
+  text-transform: none;
+}
+
+footer {
+  text-shadow: 1px 1px 10px var(--link-color);
+  background: none;
+  border: none;
+  font-style: italic;
+  text-align: center;
+}
+
+nav {
+  padding: 0;
+  border: none;
+  flex-wrap: wrap;
+  width: 25%;
+  border-right: 1px solid var(--border-color);
+  height: auto;
+}
+nav li,
+nav ul {
+  padding: 2px;
+  margin: 0;
+  list-style-type: none;
+}
+nav li::before {
+  content: "★";
+  color: var(--border-color);
+}
+nav a {
+  color: var(--link-color);
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 10px var(--link-color);
+  font-family: times new roman;
+  font-size: 1.2rem;
+  font-style: italic;
+  padding: 0 10px;
+  font-weight: normal;
+}
+
+nav li:hover {
+  background: var(--accent-color);
+}
+nav h1 {
+  padding: 3px 10px;
+  margin: 0;
+  background: var(--bg-color);
+  color: var(--mainbg-color);
+  text-shadow: 1px 1px 1px var(--border-color);
+  text-transform: uppercase;
+  text-align: left;
+}
+
+main {
+  text-align: left;
+  border-top: none;
+  display: flex;
+  padding: 0;
+     /* background-color: #d5f2fe; */
+}
+
+section {
+  height: 500px; /* altura de 500px com scroll */
+  overflow: auto; /* altura de 500px com scroll */
+  width: 100%;
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap; /* Permite que os itens (articles) quebrem para a próxima linha */
+  gap: 15px; /* Adiciona um espaçamento de 15px entre os artigos (horizontal e vertical) */
+}
+
+section article:first-child {
+  width: 100%; /* Faz o primeiro artigo ocupar a largura total da section */
+     background-color: var(--accent-color);
+}
+section article:nth-child(2),
+section article:nth-child(3) {
+  width: calc(50% - 7.5px); /* Calcula a largura para que ocupem metade, considerando o gap: 50% da largura total menos metade do gap para cada lado */
+  box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+     background-color: var(--accent-color);
+}
+section article:nth-child(4) {
+  width: 100%;
+     background-color: var(--accent-color);
+}
+
+@media screen and (max-aspect-ratio: 16/9) {
+  body {
+    margin: auto;
+    padding:15px;
+  }
+  header {
+    height: 100px;
+  }
+  main {
+    display: block;
+  }
+
+  nav {
+    width: 100%;
+    border-left: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  nav ul {
+    display: flex;
+    list-style-type: none;
+  }
+
+  section {
+    width: 95%;
+    height:auto;
+    padding:15px;
+    margin:15px auto;
+  }
+}
