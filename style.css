@@ -26,7 +26,7 @@ body {
   min-height: 100%;
   left: 0;
   top: 0;
-  background-image:url('https://sadhost.neocities.org/images/tiles/bk024.gif');
+  background-image: url("https://sadhost.neocities.org/images/tiles/bk024.gif");
   /* background-image: url("https://i.pinimg.com/originals/ab/28/83/ab288393e58eaf385396ad16fd9fa438.jpg"); */
   /* background-image:url('https://i.pinimg.com/736x/9c/47/c4/9c47c44d149f395e777fd6111fcea1f3--water-tower-chobits-cosplay.jpg'); */
   /* background-image:url('https://files.catbox.moe/kbxs0z.png'); */
@@ -96,6 +96,7 @@ h3 {
 }
 
 header,
+.topbar,
 nav,
 main,
 footer {
@@ -120,6 +121,10 @@ header h1 {
   vertical-align: text-bottom;
   background: none;
   text-transform: none;
+}
+
+.topbar {
+  font-size: 0.7vw;
 }
 
 footer {
@@ -177,7 +182,7 @@ main {
   border-top: none;
   display: flex;
   padding: 0;
-     /* background-color: #d5f2fe; */
+  /* background-color: #d5f2fe; */
 }
 
 section {
@@ -192,23 +197,27 @@ section {
 
 section article:first-child {
   width: 100%; /* Faz o primeiro artigo ocupar a largura total da section */
-     background-color: var(--accent-color);
+  background-color: var(--accent-color);
 }
 section article:nth-child(2),
 section article:nth-child(3) {
-  width: calc(50% - 7.5px); /* Calcula a largura para que ocupem metade, considerando o gap: 50% da largura total menos metade do gap para cada lado */
+  width: calc(
+    50% - 7.5px
+  ); /* Calcula a largura para que ocupem metade, considerando o gap: 50% da largura total menos metade do gap para cada lado */
   box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
-     background-color: var(--accent-color);
+  background-color: var(--accent-color);
+  height: 370px;
+	overflow-x: hidden;
 }
 section article:nth-child(4) {
   width: 100%;
-     background-color: var(--accent-color);
+  background-color: var(--accent-color);
 }
 
 @media screen and (max-aspect-ratio: 16/9) {
   body {
     margin: auto;
-    padding:15px;
+    padding: 15px;
   }
   header {
     height: 100px;
@@ -230,8 +239,8 @@ section article:nth-child(4) {
 
   section {
     width: 95%;
-    height:auto;
-    padding:15px;
-    margin:15px auto;
+    height: auto;
+    padding: 15px;
+    margin: 15px auto;
   }
 }
