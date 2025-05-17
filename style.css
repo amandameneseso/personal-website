@@ -12,13 +12,14 @@ body {
   /* background-image: url("https://files.catbox.moe/5lyeo2.png"); */
   background-attachment: fixed;
   color: var(--text-color);
-  max-width: 800px;
+  max-width: 850px;
   margin: 50px auto;
   padding: 5px;
   font-family: verdana;
   font-size: 0.8rem;
   scrollbar-color: var(--bg-color) var(--mainbg-color);
   scrollbar-width: thin;
+  cursor: url(cursor_point1d.gif), auto;
 }
 .container {
   position: fixed;
@@ -26,7 +27,8 @@ body {
   min-height: 100%;
   left: 0;
   top: 0;
-  background-image: url("https://sadhost.neocities.org/images/tiles/bk024.gif");
+  background-image: url(starblue.gif);
+  /* background-image: url("https://sadhost.neocities.org/images/tiles/bk024.gif"); */
   /* background-image: url("https://i.pinimg.com/originals/ab/28/83/ab288393e58eaf385396ad16fd9fa438.jpg"); */
   /* background-image:url('https://i.pinimg.com/736x/9c/47/c4/9c47c44d149f395e777fd6111fcea1f3--water-tower-chobits-cosplay.jpg'); */
   /* background-image:url('https://files.catbox.moe/kbxs0z.png'); */
@@ -150,7 +152,7 @@ nav ul {
   list-style-type: none;
 }
 nav li::before {
-  content: "★";
+  content: url(bulk5.gif);
   color: var(--border-color);
 }
 nav a {
