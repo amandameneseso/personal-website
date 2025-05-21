@@ -27,9 +27,51 @@
   --sidebar-width: 190px;
 }
 
-/* -------------------------------------------------------- */
+/* calendario */
+.calendar {
+  /* background: rgba(255, 255, 255, 0.8); */
+  border: 1px solid #4ccdff;
+  padding: 0.7em;
+  margin: -1.6em;
+  margin-bottom: 2em;
+  border-radius: 8px;
+  width: 170px;
+  height: 180px;
+  font-family: "Nunito", sans-serif;
+  font-size: 0.9em;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.calendar-header h2 {
+  font-size: 0.9em;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 18px);
+  gap: 4px;
+}
+
+.calendar-grid div {
+  padding: 0px;
+  text-align: center;
+  /* border: 1px solid #ccc; */
+  /* background-color: #effaff; */
+  /* border-radius: 50px; */
+}
+
+.calendar-grid .today {
+  background-color: #cef1ff;
+  font-weight: bold;
+}
+
 /* BASICS */
-/* -------------------------------------------------------- */
 
 * {
   box-sizing: border-box;

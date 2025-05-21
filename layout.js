@@ -65,7 +65,17 @@ function headerHTML() {
         <div class="sidebar-section">
           <div class="sidebar-title">Section Title</div>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          <p>Necessit atibus perferendis inventore tempore vel optio similique blanditiis quasi quam?</p>
+        </div>
+        
+        <div class="calendar">
+          <div class="calendar-header">
+            <button id="prev-month">&lt;</button>
+            <h2 id="calendar-month-year">Maio 2025</h2>
+            <button id="next-month">&gt;</button>
+          </div>
+          <div class="calendar-grid" id="calendar-grid">
+            <!-- Dias aparecem aqui via JS -->
+          </div>
         </div>
         
         <div class="sidebar-section">
@@ -213,3 +223,74 @@ function footerHTML() {
 //   if (numberOfSlashes == 1) return "./";
 //   return "../".repeat(numberOfSlashes - 1);
 // }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const calendarGrid = document.getElementById("calendar-grid");
+  const monthYear = document.getElementById("calendar-month-year");
+  const prevBtn = document.getElementById("prev-month");
+  const nextBtn = document.getElementById("next-month");
+
+  let currentDate = new Date();
+
+  function renderCalendar(date) {
+    const year = date.getFullYear();
+    const month = date.getMonth();
+
+    const firstDay = new Date(year, month, 1);
+    const lastDay = new Date(year, month + 1, 0);
+
+    const daysInMonth = lastDay.getDate();
+    const startDay = firstDay.getDay();
+
+    const monthNames = [
+      "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+      "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+    ];
+
+    monthYear.textContent = `${monthNames[month]} ${year}`;
+    calendarGrid.innerHTML = "";
+
+    // Dias da semana
+    ["D", "S", "T", "Q", "Q", "S", "S"].forEach(d => {
+      const dayEl = document.createElement("div");
+      dayEl.textContent = d;
+      dayEl.style.fontWeight = "bold";
+      calendarGrid.appendChild(dayEl);
+    });
+
+    for (let i = 0; i < startDay; i++) {
+      const emptyCell = document.createElement("div");
+      calendarGrid.appendChild(emptyCell);
+    }
+
+    const today = new Date();
+
+    for (let day = 1; day <= daysInMonth; day++) {
+      const dayEl = document.createElement("div");
+      dayEl.textContent = day;
+
+      if (
+        day === today.getDate() &&
+        month === today.getMonth() &&
+        year === today.getFullYear()
+      ) {
+        dayEl.classList.add("today");
+      }
+
+      calendarGrid.appendChild(dayEl);
+    }
+  }
+
+  prevBtn.addEventListener("click", () => {
+    currentDate.setMonth(currentDate.getMonth() - 1);
+    renderCalendar(currentDate);
+  });
+
+  nextBtn.addEventListener("click", () => {
+    currentDate.setMonth(currentDate.getMonth() + 1);
+    renderCalendar(currentDate);
+  });
+
+  renderCalendar(currentDate);
+});
+
