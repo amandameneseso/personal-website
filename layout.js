@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Page has finished loading. Now, do things.
-  loadLayoutByPetraPixel();
+  loadLayout();
 
   // Add any custom JavaScript code here...
 });
 
-function loadLayoutByPetraPixel() {
+function loadLayout() {
   const mainEl = document.querySelector("main");
   if (!mainEl) return;
   mainEl.insertAdjacentHTML("beforebegin", headerHTML());
@@ -43,8 +43,8 @@ function headerHTML() {
         <nav>
           <div class="sidebar-title">Navigation <img src="imagens/rainbowstar2.gif" alt=""></div>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="${nesting}index.html">Home</a></li>
+            <li><a href="${nesting}sobre.html">Sobre</a></li>
             <li><a href="/page2">Page 2</a></li>
             <li><a href="/page3">Page 3</a></li>
         	<li>
