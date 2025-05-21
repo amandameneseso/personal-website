@@ -89,8 +89,7 @@ function headerHTML() {
         <div class="sidebar-section">
           <div class="sidebar-title">Section Title</div>
           <marquee>
-          	<a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a>
-          	<a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a>
+          	<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           </marquee>
         </div>
         
@@ -101,10 +100,7 @@ function headerHTML() {
         
         <div class="sidebar-section">
           <div class="sidebar-title">Section Title</div>
-          <div class="site-button">
-          	<a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a>
-        	<textarea><a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a></textarea>
-          </div>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </div>
       </aside>
 	  
@@ -139,8 +135,7 @@ function headerHTML() {
         <div class="sidebar-section">
           <div class="sidebar-title">Section Title</div>
           <marquee>
-          	<a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a>
-          	<a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a>
+          	<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           </marquee>
         </div>
         
@@ -151,9 +146,7 @@ function headerHTML() {
         
         <div class="sidebar-section">
           <div class="sidebar-title">Section Title</div>
-          <div class="site-button">
-          	<a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a>
-        	<textarea><a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a></textarea>
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           </div>
         </div>
       </aside>
