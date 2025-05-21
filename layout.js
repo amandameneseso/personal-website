@@ -44,7 +44,7 @@ function headerHTML() {
           <div class="sidebar-title">Navigation <img src="imagens/rainbowstar2.gif" alt=""></div>
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="/perosnal-website/sobre.html">Sobre</a></li>
             <li><a href="/page2">Page 2</a></li>
             <li><a href="/page3">Page 3</a></li>
         	<li>
