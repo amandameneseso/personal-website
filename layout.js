@@ -43,8 +43,8 @@ function headerHTML() {
         <nav>
           <div class="sidebar-title">Navigation <img src="imagens/rainbowstar2.gif" alt=""></div>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/sobre.html">Sobre</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
             <li><a href="/page2">Page 2</a></li>
             <li><a href="/page3">Page 3</a></li>
         	<li>
@@ -166,49 +166,47 @@ function footerHTML() {
       </footer>`;
 }
 
-function giveActiveClassToCurrentPage() {
-  const els = document.querySelectorAll("nav a");
-  [...els].forEach((el) => {
-    // Normaliza o 'href' do link, removendo '.html' e '#'
-    const href = el.getAttribute("href").replace(".html", "").replace("#", "");
+// function giveActiveClassToCurrentPage() {
+//   const els = document.querySelectorAll("nav a");
+//   [...els].forEach((el) => {
+//     const href = el.getAttribute("href").replace(".html", "").replace("#", "");
 
-    // Pega o 'pathname' atual da URL do navegador
-    // Remove '/public/' se estiver presente (útil para desenvolvimento local)
-    let pathname = window.location.pathname.replace("/public/", "");
+    
+//     let pathname = window.location.pathname.replace("/public/", "");
 
-    // Remove '.html' do pathname se presente
-    pathname = pathname.replace(".html", "");
+//     // Remove '.html' do pathname se presente
+//     pathname = pathname.replace(".html", "");
 
-    // Garante que o pathname da raiz seja tratado como '/'
-    if (pathname === '/index') { // Se a URL for /index.html ou /index
-        pathname = '/';
-    }
+//     // Garante que o pathname da raiz seja tratado como '/'
+//     if (pathname === '/index') { // Se a URL for /index.html ou /index
+//         pathname = '/';
+//     }
 
-    // Compara o href do link com o pathname atual
-    // Para a Home: se href for '/' ou '/index', e pathname for '/'
-    if ((href === "/" || href === "/index") && pathname === "/") {
-      el.classList.add("active");
-    }
-    // Para outras páginas: se href e pathname forem exatamente iguais
-    else if (href !== "/" && href === pathname) {
-      el.classList.add("active");
-    }
+//     // Compara o href do link com o pathname atual
+//     // Para a Home: se href for '/' ou '/index', e pathname for '/'
+//     if ((href === "/" || href === "/index") && pathname === "/") {
+//       el.classList.add("active");
+//     }
+//     // Para outras páginas: se href e pathname forem exatamente iguais
+//     else if (href !== "/" && href === pathname) {
+//       el.classList.add("active");
+//     }
 
-    /* Lógica de Subnavegação: */
-    if (el.classList.contains("active")) { // Apenas se o link for ativo
-      if (el.closest("details")) {
-        el.closest("details").setAttribute("open", "open");
-        el.closest("details").classList.add("active");
-      }
+//     /* Lógica de Subnavegação: */
+//     if (el.classList.contains("active")) { // Apenas se o link for ativo
+//       if (el.closest("details")) {
+//         el.closest("details").setAttribute("open", "open");
+//         el.closest("details").classList.add("active");
+//       }
 
-      if (el.closest("ul")) {
-        if (el.closest("ul").closest("ul")) { // Para sub-sub-menus
-          el.closest("ul").closest("ul").classList.add("active");
-        }
-      }
-    }
-  });
-}
+//       if (el.closest("ul")) {
+//         if (el.closest("ul").closest("ul")) { // Para sub-sub-menus
+//           el.closest("ul").closest("ul").classList.add("active");
+//         }
+//       }
+//     }
+//   });
+// }
 
 // function getNesting() {
 //   const numberOfSlashes = window.location.pathname.split("/").length - 1;
