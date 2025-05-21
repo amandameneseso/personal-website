@@ -45,8 +45,11 @@ function headerHTML() {
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="/page2">Page 2</a></li>
-            <li><a href="/page3">Page 3</a></li>
+            <li><a href="/page2">Máquina do tempo</a></li>
+            <li><a href="/page3">Journal</a></li>
+            <li><a href="/page4">Artes</a></li>
+            <li><a href="/page5">Projetos</a></li>
+            <li><a href="/page6">Recursos</a></li>
         	<li>
               	<details>
                 <summary>Submenu</summary>
@@ -105,7 +108,8 @@ function headerHTML() {
         
         <div class="sidebar-section">
           <div class="sidebar-title">Section Title</div>
-          <img class="full-width-image" src="https://picsum.photos/id/112/1000/400">
+          <a href="https://lovesick.cafe/grrrl" target="_blank"><img src="imagens/madebya2-4.png" alt=""
+          /></a>
         </div>
         
         <div class="sidebar-section">
@@ -181,7 +185,6 @@ function footerHTML() {
 //   [...els].forEach((el) => {
 //     const href = el.getAttribute("href").replace(".html", "").replace("#", "");
 
-    
 //     let pathname = window.location.pathname.replace("/public/", "");
 
 //     // Remove '.html' do pathname se presente
@@ -243,15 +246,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const startDay = firstDay.getDay();
 
     const monthNames = [
-      "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
-      "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+      "Janeiro",
+      "Fevereiro",
+      "Março",
+      "Abril",
+      "Maio",
+      "Junho",
+      "Julho",
+      "Agosto",
+      "Setembro",
+      "Outubro",
+      "Novembro",
+      "Dezembro",
     ];
 
     monthYear.textContent = `${monthNames[month]} ${year}`;
     calendarGrid.innerHTML = "";
 
     // Dias da semana
-    ["D", "S", "T", "Q", "Q", "S", "S"].forEach(d => {
+    ["D", "S", "T", "Q", "Q", "S", "S"].forEach((d) => {
       const dayEl = document.createElement("div");
       dayEl.textContent = d;
       dayEl.style.fontWeight = "bold";
@@ -293,4 +306,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
   renderCalendar(currentDate);
 });
-
