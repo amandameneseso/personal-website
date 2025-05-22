@@ -27,6 +27,42 @@
   --sidebar-width: 190px;
 }
 
+/* Estiliza a barra de rolagem */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+  background: #d6ecf3;
+}
+
+/* Estiliza o fundo da trilha da barra de rolagem */
+::-webkit-scrollbar-track {
+  background: linear-gradient(
+    to bottom,
+    #ffb5cd 2%,
+    #ffcca8 17%,
+    #fff6b7 35%,
+    #daffb7 55%,
+    #aadeff 76%,
+    #cebafc 97%
+  );
+  border-radius: 0px;
+  border: 1px dotted #8f38ff;
+}
+
+/* Estiliza o "thumb" (a parte que arrasta) da scrollbar */
+::-webkit-scrollbar-thumb {
+  background: #d6ecf3;
+  border: 1px dotted #8f38ff;
+  border-radius: 0px;
+}
+
+/* Quando passar o mouse sobre o thumb */
+::-webkit-scrollbar-thumb:hover {
+  background: #8f38ff;
+  cursor: url(/emoticon/cursor_default.png), auto;
+}
+
+
 /* calendario */
 .calendar {
   /* background: rgba(255, 255, 255, 0.8); */
@@ -69,6 +105,21 @@
 .calendar-grid .today {
   background-color: #cef1ff;
   font-weight: bold;
+}
+
+#visitantes {
+  font-family: "Nunito", sans-serif;
+  font-size: 0.9em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #4ccdff;
+  padding: 1em;
+  margin: 1em;
+  margin-bottom: 2em;
+  border-radius: 8px;
+  width: 130px;
+  height: 120px;
 }
 
 /* BASICS */
@@ -128,9 +179,11 @@ a:focus {
   margin-top: 30px;
   display: grid;
   grid-gap: var(--margin);
-  grid-template: "header header header" "topbar topbar topbar" auto "leftSidebar main rightSidebar" auto "footer footer footer" auto / var(
+  grid-template:
+    "header header header" "topbar topbar topbar" auto "leftSidebar main rightSidebar" auto "footer footer footer" auto / var(
       --sidebar-width
-    ) auto var(--sidebar-width);
+    )
+    auto var(--sidebar-width);
 }
 
 main {
@@ -200,7 +253,7 @@ aside {
 }
 
 summary {
-    color: var(--link-color);
+  color: var(--link-color);
 }
 
 .left-sidebar {
@@ -255,6 +308,12 @@ summary {
   background-color: #effaff;
   padding: 15px;
   border-radius: 10px;
+}
+
+.sectionflex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Site Button: */

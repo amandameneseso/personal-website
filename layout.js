@@ -127,7 +127,7 @@ function headerHTML() {
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           <p>Necessit atibus perferendis inventore tempore vel optio similique blanditiis quasi quam?</p>
         </div>
-        
+
         <div class="sidebar-section">
           <div class="sidebar-title">Section Title</div>
           <blockquote>
