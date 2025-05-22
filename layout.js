@@ -233,6 +233,7 @@ function footerHTML() {
 //   return "../".repeat(numberOfSlashes - 1);
 // }
 
+// calendario
 document.addEventListener("DOMContentLoaded", () => {
   const calendarGrid = document.getElementById("calendar-grid");
   const monthYear = document.getElementById("calendar-month-year");

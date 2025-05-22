@@ -142,6 +142,7 @@ body {
   background: var(--background-color);
   background-image: url(starblue.gif);
   background-attachment: fixed;
+  cursor: url(/imagens/cursor_point1d.cur), auto;
 }
 
 ::selection {
