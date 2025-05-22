@@ -128,6 +128,12 @@ function headerHTML() {
           <p>Necessit atibus perferendis inventore tempore vel optio similique blanditiis quasi quam?</p>
         </div>
 
+        <div class="sidebar-section" style="text-align: center;">
+          <a href="//clap.fc2.com/post/amandameneseso/?url=https%3A%2F%2Famandameneseso.github.io%2Fpersonal-website%2F&title=amy%27s+home" target="_blank" title="Aplauso web por FC2"><img src="//clap.fc2.com/images/button/blue/amandameneseso?url=https%3A%2F%2Famandameneseso.github.io%2Fpersonal-website%2F&amp;lang=pt" alt="Aplauso web por FC2" style="border:none;" />
+          <br>
+          clique para bater palmas!</a>
+        </div>
+
         <div class="sidebar-section">
           <div class="sidebar-title">Section Title</div>
           <blockquote>
