@@ -41,7 +41,7 @@ function headerHTML() {
         
         <!-- NAVIGATION -->
         <nav>
-          <div class="sidebar-title">Navigation <img src="imagens/rainbowstar2.gif" alt=""></div>
+          <div class="sidebar-title">Navegação <img src="imagens/rainbowstar2.gif" alt=""></div>
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="sobre.html">Sobre</a></li>
@@ -64,11 +64,6 @@ function headerHTML() {
             </li>
           </ul>
         </nav>
-        
-        <div class="sidebar-section">
-          <div class="sidebar-title">Section Title</div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-        </div>
         
         <div class="calendar">
           <div class="calendar-header">
