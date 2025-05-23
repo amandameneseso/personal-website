@@ -41,31 +41,29 @@ function headerHTML() {
         
         <!-- NAVIGATION -->
         <nav>
-          <div class="sidebar-title">Navegação <img src="imagens/rainbowstar2.gif" alt=""></div>
+          <div class="sidebar-title"><img style="width: 25px;" src="imagens/nav1.gif" alt=""> Navegação <img style="width: 25px;" src="imagens/nav2.gif" alt=""></div>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="/page2">Máquina do tempo</a></li>
-            <li><a href="/page3">Journal</a></li>
-            <li><a href="/page4">Artes</a></li>
-            <li><a href="/page5">Projetos</a></li>
-            <li><a href="/page6">Recursos</a></li>
+            <li><a class="link" href="index.html"><span class="dashed" data-content="Home">Home</span></a></li>
+            <li><a class="link" href="sobre.html"><span class="dashed" data-content="Sobre">Sobre</span></a></li>
+            <li><a class="link" href="/page2"><span class="dashed" data-content="Máquina do tempo">Máquina do tempo</span></a></li>
+            <li><a class="link" href="/page3"><span class="dashed" data-content="Journal">Journal</span></a></li>
+            <li><a class="link" href="/page4"><span class="dashed" data-content="Artes">Artes</span></a></li>
+            <li><a class="link" href="/page5"><span class="dashed" data-content="Projetos">Projetos</span></a></li>
+            <li><a class="link" href="/page6"><span class="dashed" data-content="Recursos">Recursos</span></a></li>
         	<li>
               	<details>
                 <summary>Submenu</summary>
                 <ul>
-                  <li><a href="/page-a">Page A</a></li>
-                  <li><a href="/page-b">Page B</a></li>
-                  <li><a href="/page-c">Page C</a></li>
-                  <li><a href="/page-d">Page D</a></li>
-                  <li><a href="/page-e">Page E</a></li>
+                  <li><a class="link" href="/page-a"><span class="dashed" data-content="Page A">Page A</span></a></li>
+                  <li><a class="link" href="/page-b"><span class="dashed" data-content="Page B">Page B</span></a></li>
+                  <li><a class="link" href="/page-c"><span class="dashed" data-content="Page C">Page C</span></a></li>
                 </ul>
                 </details>
             </li>
           </ul>
         </nav>
         
-        <div class="calendar">
+        <div class="sidebar-section">
           <div class="calendar-header">
             <button id="prev-month">&lt;</button>
             <h2 id="calendar-month-year">Maio 2025</h2>
@@ -107,21 +105,11 @@ function headerHTML() {
           /></a>
         </div>
         
-        <div class="sidebar-section">
-          <div class="sidebar-title">Section Title</div>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-        </div>
       </aside>
 	  
       <!-- RIGHT SIDEBAR -->
 
       <aside class="right-sidebar">
-        
-        <div class="sidebar-section">
-          <div class="sidebar-title">Section Title</div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          <p>Necessit atibus perferendis inventore tempore vel optio similique blanditiis quasi quam?</p>
-        </div>
 
         <div class="sidebar-section" style="text-align: center;">
           <a href="//clap.fc2.com/post/amandameneseso/?url=https%3A%2F%2Famandameneseso.github.io%2Fpersonal-website%2F&title=amy%27s+home" target="_blank" title="Aplauso web por FC2"><img src="//clap.fc2.com/images/button/blue/amandameneseso?url=https%3A%2F%2Famandameneseso.github.io%2Fpersonal-website%2F&amp;lang=pt" alt="Aplauso web por FC2" style="border:none;" />
@@ -164,6 +152,11 @@ function headerHTML() {
           <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           </div>
         </div>
+
+        <div class="sectionflex">
+          <img src="imagens/036806d6.gif" alt="" />
+        </div>
+
       </aside>
       `;
 }
@@ -269,7 +262,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ["D", "S", "T", "Q", "Q", "S", "S"].forEach((d) => {
       const dayEl = document.createElement("div");
       dayEl.textContent = d;
-      dayEl.style.fontWeight = "bold";
+      // dayEl.style.fontWeight = "bold";
       calendarGrid.appendChild(dayEl);
     });
 
