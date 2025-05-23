@@ -343,10 +343,18 @@ summary {
 	grid-gap:55px;
 }
 
-.box-right {
-	background: url(imagens/me.png);
-	background-size: contain;
-  background-repeat: no-repeat;
+.box-right img {
+	/* background: url(imagens/me.png); */
+	/* background-size: contain; */
+  /* background-repeat: no-repeat; */
+  width: 150px;
+}
+
+.imgborder {
+  height: auto;
+  border-image: url(imagens/dottedlace.gif) 7 fill round;
+  border-width: 7px;
+  border-style: solid;
 }
 
 .justify {
